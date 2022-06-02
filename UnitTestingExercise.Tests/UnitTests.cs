@@ -14,7 +14,7 @@ namespace UnitTestingExercise.Tests
             //Arrange
             // create a Calculator object
 
-            var test = new UnitTests();
+            var test = new Calculator();
 
 
             //Act
@@ -28,43 +28,31 @@ namespace UnitTestingExercise.Tests
             Assert.Equal(expected, actual);
         }
 
-        private object Add(int num1, int num2, int num3)
-        {
-            throw new NotImplementedException();
-        }
 
         [Theory]
-        [InlineData(5,5,0)]//Add test data <-------
+        [InlineData(5, 5, 0)]//Add test data <-------
         public void SubtractTest(int minuend, int subtrhend, int expected)
         {
             //Start Step 5 here:
 
             //Arrange
-            var tester = new UnitTests();
+            var tester = new Calculator();
 
             //Act
-            var actual = tester.Subtract( minuend,  subtrhend);
+            var actual = tester.Subtract(minuend, subtrhend);
 
             //Assert
             Assert.Equal(expected, actual);
         }
 
-        private object Subtract(int minuend, int subtrhend)
-        {
-            throw new NotImplementedException();
-        }
 
-        internal object Multiply(int num1, int num2)
-        {
-            throw new NotImplementedException();
-        }
 
         [Theory]
         [InlineData(20, 4, 5)]//Add test data <-------
         public void DivideTest(int num1, int num2, int expected)
         {
             //Arrange
-            var tester = new UnitTests();
+            var tester = new Calculator();
 
             //Act
             var actual = tester.Divide(num1, num2);
@@ -73,24 +61,22 @@ namespace UnitTestingExercise.Tests
             Assert.Equal(expected, actual);
         }
 
-        private object Divide(int num1, int num2)
-        {
-            throw new NotImplementedException();
-        }
-    }
+
+
 
         [Theory]
-        [InlineData(3,4,12)]//Add test data <-------
+        [InlineData(3, 4, 12)]//Add test data <-------
         public void MultiplyTest(int num1, int num2, int expected)
         {
-        //Arrange
-        var tester = new UnitTests();
+            //Arrange
+            var tester = new Calculator();
 
-        //Act
-        var actual = tester.Multiply(num1, num2);
+            //Act
+            var actual = tester.Multiply(num1, num2);
 
-        //Assert
-        Assert.Equal(expected, actual);
+            //Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }
        
